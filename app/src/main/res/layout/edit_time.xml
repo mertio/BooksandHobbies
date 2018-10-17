@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340dp" android:layout_height="wrap_content" android:background="@drawable/round2">
+
+    <TextView
+        android:text="@string/edittime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView5"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:textColor="@color/d99" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="13dp"
+        android:id="@+id/editTimeSpent"
+        android:textColor="@android:color/black"
+        android:textColorHint="?attr/colorButtonNormal"
+        android:backgroundTint="@color/d99"
+        android:textColorLink="@color/d99"
+        android:hint="@string/settime"
+        android:layout_below="@+id/textView5"
+        android:layout_alignStart="@+id/todoEditButton"
+        android:inputType="number"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:text="@string/resetpages"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeResetButton"
+        android:background="@drawable/time_button_round"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:layout_width="280dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/timeSetButton"
+        android:layout_alignStart="@+id/timeSetButton"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:text="@string/set"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeSetButton"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@drawable/edit_button"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"
+        android:layout_width="280dp"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/editTimeSpent"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

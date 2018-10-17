@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content" android:background="@drawable/round2"
+    android:layout_width="340dp">
+
+    <TextView
+        android:text="@string/editdeletebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView5"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:textColor="@color/d99" />
+
+    <Button
+        android:text="@string/delete"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteBook"
+        android:background="@drawable/time_button_round"
+        android:layout_width="280dp"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/bookEditButton"
+        android:layout_alignStart="@+id/bookEditButton"
+        android:layout_marginBottom="13dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editBookName33"
+        android:textColor="@android:color/black"
+        android:textColorHint="?attr/colorButtonNormal"
+        android:backgroundTint="@color/d99"
+        android:textColorLink="@color/d99"
+        android:hint="@string/bookname"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editPageNumbers"
+        android:textColorHint="?attr/colorButtonNormal"
+        android:textColor="@android:color/black"
+        android:backgroundTint="@color/d99"
+        android:textColorLink="@color/d99"
+        android:hint="@string/numofpages"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/editBookName33"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/edit"
+        android:id="@+id/bookEditButton"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@drawable/edit_button"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"
+        android:layout_width="280dp"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editPageNumbers"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+

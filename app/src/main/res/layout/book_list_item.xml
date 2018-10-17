@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/gr3"
+    android:layout_height="55dp">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listProgressBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:max="100"
+        android:progress="37"
+        android:progressTint="@color/green"
+        android:progressBackgroundTint="@color/gr3" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/ic_book_icon"
+        android:id="@+id/bookIcon"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="00 h 00 m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeSpentBook2"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/d99"
+        android:layout_marginEnd="10dp"
+        android:textStyle="normal|bold"
+        android:layout_above="@+id/listProgressBar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/bookName" />
+
+    <TextView
+        android:text="book_name"
+        android:layout_height="wrap_content"
+        android:id="@+id/book_name"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/d99"
+        android:layout_width="200dp"
+        android:textSize="19dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/bookIcon" />
+</RelativeLayout>

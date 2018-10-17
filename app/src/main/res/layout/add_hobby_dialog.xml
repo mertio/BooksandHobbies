@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/round2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="@string/addahobby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView4"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/d99" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/addhobbyName"
+        android:hint="@string/hobbyname"
+        android:textColorHint="?attr/colorButtonNormal"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_marginLeft="5dp"
+        android:textSize="20dp"
+        android:textColorLink="@color/d99"
+        android:textColor="@android:color/black"
+        android:backgroundTint="@color/d99" />
+
+    <TextView
+        android:text="@string/ok"
+        android:layout_height="wrap_content"
+        android:id="@+id/addhobbyOk"
+        android:textColor="@color/d99"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_alignBaseline="@+id/addhobbyCancel"
+        android:layout_alignBottom="@+id/addhobbyCancel"
+        android:layout_alignParentEnd="true"
+        android:textSize="20dp"
+        android:padding="10dp" />
+
+    <TextView
+        android:text="@string/cancel"
+        android:id="@+id/addhobbyCancel"
+        android:textColor="@color/d99"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/addhobbyName"
+        android:layout_alignStart="@+id/textView4"
+        android:textSize="20dp"
+        android:padding="10dp" />
+</RelativeLayout>

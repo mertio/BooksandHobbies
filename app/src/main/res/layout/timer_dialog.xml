@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:background="@drawable/round2"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="191dp"
+        android:layout_height="40dp"
+        android:layout_width="350dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:id="@+id/leftBut"
+            android:paddingLeft="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/left_timer_button">
+
+                <Button
+                    android:text="@string/reset"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/resButton"
+                    style="@android:style/Widget.Material.Light.Button.Borderless.Small"
+                    android:elevation="20dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal|bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightColor">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:background="@color/ff">
+
+            <Button
+                android:text="@string/pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pauseButton"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textColor="@android:color/black"
+                android:textStyle="normal|bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightColor">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:background="@color/f9">
+
+            <Button
+                android:text="@string/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/startButton"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textColor="@android:color/black"
+                android:textStyle="normal|bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightColor">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:id="@+id/rightBut"
+            android:paddingRight="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/right_timer_button"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
+
+                <Button
+                    android:text="@string/record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recButton"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:paddingRight="5dp"
+                    android:textStyle="normal|bold" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:id="@+id/recorded"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible"
+        android:textSize="14sp" />
+
+    <TextView
+        android:text="@string/timerrec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:id="@+id/textView15"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_alignBottom="@+id/recorded"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/d99"
+        android:textSize="30dp" />
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer3"
+        android:textColor="@android:color/black"
+        android:layout_alignTop="@+id/recorded"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:textSize="70dp" />
+
+    <TextView
+        android:text="Close"
+        android:layout_height="wrap_content"
+        android:id="@+id/closeButton"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/d99"
+        android:layout_width="100dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="260dp" />
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round2">
+
+    <TextView
+        android:text="@string/addabook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView4"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/d99" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/addBookName"
+        android:hint="@string/bookname"
+        android:textColorHint="?attr/colorButtonNormal"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_marginLeft="5dp"
+        android:textSize="20dp"
+        android:textColorLink="@color/darkPurple"
+        android:textColor="@android:color/black"
+        android:backgroundTint="@color/d99" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:hint="@string/numofpages"
+        android:textColorHint="?attr/colorButtonNormal"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:id="@+id/numofpages"
+        android:textColorLink="@color/darkPurple"
+        android:textColor="@android:color/black"
+        android:backgroundTint="@color/d99"
+        android:textSize="20dp"
+        android:layout_below="@+id/addBookName"
+        android:layout_alignStart="@+id/addBookName"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:text="@string/ok"
+        android:layout_height="wrap_content"
+        android:id="@+id/addBookOk"
+        android:textColor="@color/d99"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="20dp"
+        android:textSize="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/numofpages"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <TextView
+        android:text="@string/cancel"
+        android:id="@+id/addBookCancel"
+        android:textColor="@color/d99"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:layout_alignBaseline="@+id/addBookOk"
+        android:layout_alignBottom="@+id/addBookOk"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp" />
+</RelativeLayout>

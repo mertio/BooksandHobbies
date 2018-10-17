@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".59"
+        android:background="@color/df">
+
+        <TextView
+            android:text="B&amp;H"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:textSize="90sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/d99"
+            android:fontFamily="cursive" />
+
+        <TextView
+            android:text="You have been reading this book for 0.0 minutes a day."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookTimeAverage"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:layout_below="@+id/textView8"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="You have been reading 0.0 pages a day."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookPageAverage"
+            android:textSize="13sp"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/bookTimeAverage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp" />
+
+        <TextView
+            android:text="Start Date: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/bookStartDate"
+            android:textSize="13sp"
+            android:textColor="@color/d99" />
+
+        <TextView
+            android:text="Last Update: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/bookLastUpdate"
+            android:textSize="13sp"
+            android:textColor="@color/d99" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/header_shadow">
+
+        <TextView
+            android:text="bookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookName"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/likeWhite"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".30"
+        android:background="@color/df">
+
+        <TextView
+            android:text="@string/timespent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textColor="@android:color/black" />
+
+
+        <RelativeLayout
+            android:layout_height="55dp"
+            android:id="@+id/pages"
+            android:background="@drawable/layout_shadow"
+            android:layout_width="165dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="38dp"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:text="00 hr. 00 min."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookTime"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+
+
+
+        <TextView
+            android:text="@string/pagsread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="110dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textColor="@android:color/black" />
+
+
+        <RelativeLayout
+            android:layout_height="55dp"
+            android:id="@+id/pages"
+            android:background="@drawable/layout_shadow"
+            android:layout_width="165dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="140dp"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pagesRead"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/ic_add"
+            android:id="@+id/addPages"
+            android:background="@drawable/time_button_round"
+            android:layout_marginTop="10dp"
+            android:layout_alignTop="@+id/pages"
+            android:layout_toStartOf="@+id/pages" />
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/ic_add"
+            android:id="@+id/addMinutes"
+            android:background="@drawable/time_button_round"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="59dp" />
+
+        <TextView
+            android:text="@string/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:id="@+id/textView2"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/pages"
+            android:layout_centerHorizontal="true" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/custom_progress_bar"
+            android:id="@+id/bookProgressBar"
+            android:progress="64"
+            android:indeterminate="false"
+            android:max="100"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_height="25dp"
+            android:layout_width="250dp" />
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/ic_chronometer"
+            android:id="@+id/recordTimeBook"
+            android:background="@drawable/time_button_round"
+            android:layout_alignTop="@+id/addMinutes"
+            android:layout_toEndOf="@+id/pages" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
