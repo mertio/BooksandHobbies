@@ -14,6 +14,7 @@ public class Hobby extends Thing implements Serializable {
 
     public Hobby() {
         super();
+        hobbyId = getThingId();
         toDo = new ArrayList<String>();
         done = new ArrayList<String>();
     }

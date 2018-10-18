@@ -10,11 +10,13 @@ import java.util.ArrayList;
 
 
 public class Book extends Thing implements Serializable {
+    private int bookId;
     private int numOfPages = 0;
     private int pagesRead = 0;
 
     public Book() {
         super();
+        bookId = getThingId();
     }
 
     public int getNumOfPages() {
@@ -33,6 +35,13 @@ public class Book extends Thing implements Serializable {
         this.pagesRead = pagesRead;
     }
 
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
+    }
 
     @Override
     public String toString() {

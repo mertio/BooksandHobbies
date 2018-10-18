@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 
 public class Thing implements Serializable{
-    private String thingId;
+    private int thingId;
     private String name;
     private int timeSpent;
     private String dateStarted;
@@ -75,11 +75,11 @@ public class Thing implements Serializable{
         this.timeSpent = timeSpent;
     }
 
-    public String getThingId() {
+    public int getThingId() {
         return thingId;
     }
 
-    public void setThingId(String thingId) {
+    public void setThingId(int thingId) {
         this.thingId = thingId;
     }
 
