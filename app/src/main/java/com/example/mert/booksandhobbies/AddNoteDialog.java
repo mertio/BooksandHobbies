@@ -49,6 +49,7 @@ public class AddNoteDialog extends DialogFragment {
 
                 MyMethods.updateTheAveragesHobby(timeAverage, index);
 
+                HobbyActivity.toDoList.smoothScrollToPosition(HobbyActivity.toDoList.getAdapter().getCount() - 1);
                 dismiss();
             }
         });

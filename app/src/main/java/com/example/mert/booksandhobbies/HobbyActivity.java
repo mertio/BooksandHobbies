@@ -50,6 +50,9 @@ public class HobbyActivity extends AppCompatActivity {
     TodoAdapter mTodoAdapter = new TodoAdapter();
     DoneAdapter mDoneAdapter = new DoneAdapter();
 
+    protected static ListView toDoList;
+    protected static ListView doneList;
+
     String startDate = "Start Date: ";
     String lastUpdate = "Last Update: ";
 
@@ -86,15 +89,14 @@ public class HobbyActivity extends AppCompatActivity {
         hobbyStartDate.setText(startDate);
         hobbyLastUpdate.setText(lastUpdate);
 
-        Hobby hobby = (Hobby) MyMethods.things.get(index);
 
 
 
 
-        ListView toDoList = (ListView) findViewById(R.id.toDoList);
+        toDoList = (ListView) findViewById(R.id.toDoList);
         toDoList.setAdapter(mTodoAdapter);
 
-        ListView doneList = (ListView) findViewById(R.id.doneList);
+        doneList = (ListView) findViewById(R.id.doneList);
         doneList.setAdapter(mDoneAdapter);
 
         if(!myHobby.toDo.isEmpty()) {
@@ -280,7 +282,7 @@ public class HobbyActivity extends AppCompatActivity {
                     }
 
                     Hobby hobby1 = (Hobby)  MyMethods.things.get(index);
-                    hobby1.done.add(hobby1.toDo.get(i));
+                    hobby1.done.add(0, hobby1.toDo.get(i)); // changed to add each to first index
                     createNewDone(hobby1.toDo.get(i));
 
 
@@ -296,6 +298,7 @@ public class HobbyActivity extends AppCompatActivity {
 
                     mTodoAdapter.notifyDataSetChanged();
 
+                    doneList.smoothScrollToPosition(0);
 
 
 
@@ -370,7 +373,7 @@ public class HobbyActivity extends AppCompatActivity {
             return view;
         }
         public void addDoneNote(String s){
-            doneList.add(s);
+            doneList.add(0, s);
             notifyDataSetChanged();
         }
     }

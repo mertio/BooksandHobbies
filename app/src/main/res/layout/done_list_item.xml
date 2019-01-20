@@ -1,48 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="172dp" android:layout_height="40dp"
-    android:background="@color/likeWhite" android:descendantFocusability="blocksDescendants">
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/likeWhite"
+    android:descendantFocusability="blocksDescendants">
 
     <CheckBox
+        android:id="@+id/DoneCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/DoneCheckBox"
-        android:textColor="@color/darkPurple"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
         android:checked="true"
         android:clickable="false"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:textColor="@color/darkPurple" />
 
     <TextView
-        android:text="April"
+        android:id="@+id/monthDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/monthDone"
-        android:textColor="@color/d99"
-        android:textSize="10sp"
-        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/DoneCheckBox"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="7dp"
-        android:layout_alignBottom="@+id/DoneCheckBox" />
+        android:layout_marginRight="10dp"
+        android:text="April"
+        android:textColor="@color/d99"
+        android:textSize="10sp"
+        android:visibility="gone" />
 
     <TextView
-        android:text="20"
+        android:id="@+id/dayDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dayDone"
+        android:layout_alignTop="@+id/doneText"
+        android:layout_alignEnd="@+id/monthDone"
+        android:text="20"
         android:textColor="@color/d99"
         android:textSize="18sp"
-        android:layout_alignTop="@+id/doneText"
-        android:layout_alignEnd="@+id/monthDone" />
+        android:visibility="gone" />
 
     <TextView
-        android:text="TextView"
-        android:layout_height="50dp"
         android:id="@+id/doneText"
-        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
         android:layout_toEndOf="@+id/DoneCheckBox"
         android:padding="2dp"
-        android:layout_width="90dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
         android:textSize="14sp" />
 </RelativeLayout>

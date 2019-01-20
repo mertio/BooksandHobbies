@@ -28,7 +28,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    ThingAdapter mThingAdapter = new ThingAdapter();
+    protected static ListView listOfThings;
+    protected ThingAdapter mThingAdapter = new ThingAdapter();
     String currentDate = "";
 
     @Override
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView addBook = (ImageView) findViewById(R.id.addBook);
         ImageView addHobby = (ImageView) findViewById(R.id.addHobby);
 
-        ListView listOfThings = (ListView) findViewById(R.id.bookHobbyList);
+        listOfThings = (ListView) findViewById(R.id.bookHobbyList);
         listOfThings.setAdapter(mThingAdapter);
 
 
@@ -60,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
             }
             mThingAdapter.notifyDataSetChanged();
         }
+
+
+
+
 
         addBook.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -319,6 +324,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        if(listOfThings != null) {
+            listOfThings.smoothScrollToPosition(0);
+        }
+
 
     }
 

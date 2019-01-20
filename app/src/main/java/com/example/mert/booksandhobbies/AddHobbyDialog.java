@@ -48,6 +48,9 @@ public class AddHobbyDialog extends DialogFragment {
                 final long tm = System.currentTimeMillis();
                 MyMethods.things.get(MyMethods.things.size()-1).setTimeStarted(tm);
 
+                if(MainActivity.listOfThings != null && MainActivity.listOfThings.getAdapter() != null) {
+                    MainActivity.listOfThings.smoothScrollToPosition(MainActivity.listOfThings.getAdapter().getCount() - 1);
+                }
                 dismiss();
             }
         });

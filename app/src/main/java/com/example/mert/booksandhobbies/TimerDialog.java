@@ -137,7 +137,7 @@ public class TimerDialog extends DialogFragment {
 
 
         Dialog dialog = builder.create();
-        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCanceledOnTouchOutside(false);
 
 
         return dialog;

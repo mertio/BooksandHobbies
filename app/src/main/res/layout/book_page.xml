@@ -24,45 +24,49 @@
             android:fontFamily="cursive" />
 
         <TextView
-            android:text="You have been reading this book for 0.0 minutes a day."
+            android:id="@+id/bookTimeAverage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bookTimeAverage"
+            android:layout_below="@+id/textView8"
+            android:layout_centerHorizontal="true"
+            android:text="You have been reading this book for 0.0 minutes a day."
             android:textColor="@android:color/black"
             android:textSize="13sp"
-            android:layout_below="@+id/textView8"
-            android:layout_centerHorizontal="true" />
+            android:visibility="gone" />
 
         <TextView
-            android:text="You have been reading 0.0 pages a day."
+            android:id="@+id/bookPageAverage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bookPageAverage"
-            android:textSize="13sp"
-            android:textColor="@android:color/black"
             android:layout_below="@+id/bookTimeAverage"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="7dp" />
+            android:layout_marginTop="7dp"
+            android:text="You have been reading 0.0 pages a day."
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:visibility="gone" />
 
         <TextView
-            android:text="Start Date: "
+            android:id="@+id/bookStartDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/bookStartDate"
+            android:layout_alignParentTop="true"
+            android:text="Start Date: "
+            android:textColor="@color/d99"
             android:textSize="13sp"
-            android:textColor="@color/d99" />
+            android:visibility="gone" />
 
         <TextView
-            android:text="Last Update: "
+            android:id="@+id/bookLastUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:id="@+id/bookLastUpdate"
+            android:text="Last Update: "
+            android:textColor="@color/d99"
             android:textSize="13sp"
-            android:textColor="@color/d99" />
+            android:visibility="gone" />
     </RelativeLayout>
 
     <RelativeLayout

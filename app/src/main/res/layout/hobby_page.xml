@@ -24,35 +24,38 @@
             android:textColor="@color/d99" />
 
         <TextView
-            android:text="You have been doing this hobby for 0.0 minutes a day."
+            android:id="@+id/hobbyTimeAverage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/hobbyTimeAverage"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="7dp"
             android:layout_below="@+id/textView12"
             android:layout_centerHorizontal="true"
-            android:textSize="13sp" />
+            android:layout_marginTop="7dp"
+            android:text="You have been doing this hobby for 0.0 minutes a day."
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:visibility="gone" />
 
         <TextView
-            android:text="Start Date: "
+            android:id="@+id/hobbyStartDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/hobbyStartDate"
+            android:layout_alignParentTop="true"
+            android:text="Start Date: "
             android:textColor="@color/d99"
-            android:textSize="13sp" />
+            android:textSize="13sp"
+            android:visibility="gone" />
 
         <TextView
-            android:text="Last Update: "
+            android:id="@+id/hobbyLastUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:id="@+id/hobbyLastUpdate"
+            android:text="Last Update: "
             android:textColor="@color/d99"
-            android:textSize="13sp" />
+            android:textSize="13sp"
+            android:visibility="gone" />
     </RelativeLayout>
 
     <RelativeLayout

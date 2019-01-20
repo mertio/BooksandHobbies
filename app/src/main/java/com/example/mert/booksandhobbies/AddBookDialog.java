@@ -55,7 +55,9 @@ public class AddBookDialog extends DialogFragment {
                 }catch (NumberFormatException e) {
                     Toast.makeText(getActivity().getApplicationContext(), "Please write the number of pages.", Toast.LENGTH_SHORT).show();
                 }
-
+                if(MainActivity.listOfThings != null && MainActivity.listOfThings.getAdapter() != null) {
+                    MainActivity.listOfThings.smoothScrollToPosition(MainActivity.listOfThings.getAdapter().getCount() - 1);
+                }
                 dismiss();
             }
         });
