@@ -48,8 +48,8 @@ public class TimerDialog extends DialogFragment {
 
         chrono.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
             public void onChronometerTick(Chronometer cArg) {
-                seconds++;
-                cArg.setText(MyMethods.seconds2TimeString((seconds)));
+                    seconds++;
+                    cArg.setText(MyMethods.seconds2TimeString((seconds)));
             }
         });
 
@@ -78,8 +78,9 @@ public class TimerDialog extends DialogFragment {
             @Override
             public void onClick(View view) {
 
-                chrono.start();
                 isRunning = true;
+                chrono.start();
+
             }
         });
 
@@ -145,9 +146,10 @@ public class TimerDialog extends DialogFragment {
 
     public void onResume() {
         super.onResume();
-        if(startTime!=0)
-        endTime = (int) System.currentTimeMillis()/1000;
-        seconds += endTime-startTime;
+        if(startTime!=0 && isRunning) {
+            endTime = (int) System.currentTimeMillis() / 1000;
+            seconds += endTime - startTime;
+        }
         startTime=0;
         endTime=0;
     }
